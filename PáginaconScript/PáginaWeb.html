@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda Veneno</title>
+  <style>
+        body{
+              background-image: url(./img/fondo.jfif);        
+            }
+        #articulos{
+
+        }
+        ul {
+          list-style: none;
+        }
+
+        li {
+          display: inline-block;
+          margin-right: 10px; /* add spacing between items */
+        } 
+        img{
+          margin: 30px;
+          border: 10px solid orange;
+          border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+        -webkit-text-stroke: 2px orange; /* width and color */
+        font-family: sans; color: black;
+        font-size: 80px;
+        }
+        h2{
+          text-align: center;
+          -webkit-text-stroke: 2px orange; /* width and color */
+          font-family: sans; color: orange;
+
+        }
+        b{
+          color: darkorange;
+        }
+        .hola{
+          font-size: 30px;
+          color: whitesmoke;
+          font-family: sans-serif;
+          -webkit-text-stroke: 4px white; /* width and color */
+        }
+        p{
+          -webkit-text-stroke: 2px orange; /* width and color */
+          font-family: sans; color: whitesmoke;
+          font-size: 30px;
+          margin-right: 60px; 
+          margin-left: 60px;          
+        }
+        .menu{
+          text-align: left;
+          margin: 5%;
+          border: 10px solid orange;
+          padding: 10px;
+          border-radius: 30px ;
+          font-size: 24px;
+        }
+        button {
+          border: none;
+          cursor: pointer;
+          appearance: none;
+          background-color: inherit;
+        }
+
+        .scriptSaludo{
+          display: inline-block;
+        }
+    </style>
+
+    <script type="text/javascript">
+      function myAlert() {
+        alert("Artículo añadido correctamente....");
+        return;
+      }
+    </script>
+
+        <script>
+      function myFunction(nombre,oficio) {
+        document.getElementById("respuesta").innerHTML = "Bienvenido " + nombre + ", el " + oficio + ".";
+      }
+    </script>
+
+    <script type="text/javascript">
+      function myAlert() {
+        alert("Artículo añadido correctamente....");
+        return;
+      }
+    </script>
+</head>
+  <body>
+    <h1>VENENO</h1>
+    <h2>Artículos de deportes de contacto</h2> 
+    <div class="menu">
+      <ul>
+        <li><p>Más vendidos</p></li>
+        <li><p>Ofertas</p></li>
+        <li><p>Carrito</p></li>
+        <li><p>Colecciones</p></li>
+        <li><p>Hombre</p></li>
+        <li><p>Mujer</p></li>
+      </ul>
+    </div>      
+    <div id="articulos">
+      <ul>
+        <li><img src="./img/art1.jfif" alt="Pantalón" width="250" height="300"><button onclick ="myAlert();"><img src="./img/carrito.png" alt="carrito" width="30" height="30"></button ></li>
+        <li><img src="./img/art2.jpg" alt="Paos" width="250" height="300"><button  onclick ="myAlert();"><img src="./img/carrito.png" alt="carrito" width="30" height="30"></button ></li>
+        <li><img src="./img/art3.webp" alt="Guantes" width="250" height="300"><button  onclick ="myAlert();"><img src="./img/carrito.png" alt="carrito" width="30" height="30"></button ></li>
+      </ul>
+    </div>
+
+    
+
+    <p>"Usa el botón de abajo para que te salude"</p>
+
+    <button onclick="myFunction('Fulanito','programador')"><p class="hola">HOLAAA</p></button>
+
+    <p id="respuesta"></p>
+
+
+
+
+
+
+  </body>
+</html>
+</html>
