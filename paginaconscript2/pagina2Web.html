@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina</title>
+  <style>
+        @font-face {
+            font-family: 'Naruto';
+            src: url('fuentes/ninja-naruto.regular.ttf') format('truetype'),
+        }
+
+
+        body{
+             background-color: black;   
+             text-align: center;     
+            }
+        ul {
+          list-style: none;
+        }
+        li {
+          display: inline-block;
+          margin-right: 10px; /* add spacing between items */
+        } 
+        img{
+          margin: 30px;
+          border: 10px solid orange;
+          border-radius: 5px;
+          box-shadow:
+            0 0 5px #fdcf00,
+            0 0 5px #fdcf00, 
+            0 0 10px #fdcf00, 
+            0 0 20px rgb(253, 136, 2), 
+            0 0 25px rgb(253, 136, 2), 
+            inset 0 0 10px rgba(255,255,255,0.3);
+        }
+        h1{
+          transition: all 4s;
+          text-align: center;
+          -webkit-text-stroke: 2px orange; /* width and color */
+          font-family: 'Naruto', sans-serif; 
+          font-size: 80px;
+        }
+        h1:hover{
+          width: 130%;
+        }
+        button{
+          background-color: whitesmoke; /* Green */
+          border: 1px solid whitesmoke;
+          font-family: 'Naruto', sans-serif; 
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          box-shadow:
+            0 0 5px #fdcf00,
+            0 0 5px #fdcf00, 
+            0 0 10px #fdcf00, 
+            0 0 20px rgb(253, 136, 2), 
+            0 0 25px rgb(253, 136, 2), 
+            inset 0 0 10px rgba(255,255,255,0.3);
+
+        }
+        button:hover{
+          height: 80px;
+          width: 400px;
+          background-color: lightgrey;
+        }
+        #nombreMostrado{
+          color: whitesmoke;
+          font-size: 30px;
+        }
+  </style>
+
+    <script type="text/javascript">
+      function myAlert() {
+        alert("Hola");
+        return;
+      }
+      function myAlert2() {
+        alert("Adiós");
+        return;
+      }
+
+      var nombre;
+
+      async function solicitarNombre() {
+        nombre = prompt('¿Cómo te llamas?');
+        MostrarNombre();
+      }
+      // Solicitar el nombre mediante un prompt
+      function MostrarNombre() {
+        // Mostrar el nombre en el elemento HTML
+        var nombreMostrado = document.getElementById("nombreMostrado");
+        nombreMostrado.textContent = "¡Bienvenid@ a mi página, " + nombre + "!";
+      }
+
+      let valor1, valor2;
+
+      async function obtenerValores() {
+          valor1 = parseFloat(prompt("Ingrese el primer valor:"));
+          valor2 = parseFloat(prompt("Ingrese el segundo valor:"));
+      }
+
+      function sumar() {
+          return valor1 + valor2;
+      }
+
+      function restar() {
+          return valor1 - valor2;
+      }
+
+      function multiplicar() {
+          return valor1 * valor2;
+      }
+
+      function dividir() {
+          if (valor2 === 0) {
+              return "No es posible dividir por cero";
+          }
+          return valor1 / valor2;
+      }
+
+      async function iniciarCalculadora() {
+      while (true) {
+          await obtenerValores();
+
+          const operacion = prompt("Elija una operación:\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Introducir nuevos valores\n6. Salir del programa");
+
+          switch (operacion) {
+              case "1":
+                  prompt("Resultado de la suma: "+ sumar());
+                  break;
+              case "2":
+                  prompt("Resultado de la resta: "+ restar());
+                  break;
+              case "3":
+                  prompt("Resultado de la multiplicación: "+ multiplicar());
+                  break;
+              case "4":
+                  prompt("Resultado de la división: "+ dividir());
+                  break;
+              case "5":
+                  // obtenerValores(); eliminanmos para evitar la doble solicitud 
+                  break;
+              case "6":
+                  alert("¡Hasta luego!");
+                  // Salir del bucle while
+                  return;
+              default:
+                  alert("Opción no válida. Por favor, elija una opción válida.");
+         }
+      }    
+}
+
+    </script>
+
+
+</head>
+  <body>
+    <h1>Pagina con JS</h1>     
+    <button onclick="myAlert();">Pulsa aqui para que te salude</button>
+    <hr>
+    <img src="pez.jfif" alt="Pantalón" width="250" height="300" onmouseover="myAlert2();">
+    <p id="nombreMostrado"></p>
+    <button onclick="solicitarNombre();">Introducir nombre</button>
+    <button onclick="iniciarCalculadora();">CALCULADORA</button>
+  </body>
+</html>
+</html>
