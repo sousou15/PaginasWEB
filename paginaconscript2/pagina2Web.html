@@ -41,9 +41,12 @@
           font-size: 80px;
         }
         h1:hover{
-          width: 130%;
+          transform: scale(1.5);
+          transition: transform 0.3s ease;
+          color: orange;
         }
         button{
+          transition: all 1s;
           background-color: whitesmoke; /* Green */
           border: 1px solid whitesmoke;
           font-family: 'Naruto', sans-serif; 
@@ -63,9 +66,10 @@
 
         }
         button:hover{
-          height: 80px;
-          width: 400px;
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
           background-color: lightgrey;
+          color: darkorange;
         }
         #nombreMostrado{
           color: whitesmoke;
@@ -159,7 +163,7 @@
 
 </head>
   <body>
-    <h1>Pagina con JS</h1>     
+    <h1>JHON EL PESCAO</h1>     
     <button onclick="myAlert();">Pulsa aqui para que te salude</button>
     <hr>
     <img src="pez.jfif" alt="Pantalón" width="250" height="300" onmouseover="myAlert2();">
