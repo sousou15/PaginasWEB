@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tarea 3</title>
+    <style>
+        /* Estilos opcionales con CSS */
+        @font-face {
+            font-family: 'Naruto';
+            src: url('fuentes/ninja-naruto.regular.ttf') format('truetype'),
+        }
+        @font-face {
+            font-family: 'Dare';
+            src: url('fuentes/DARES.ttf') format('truetype'),
+        }
+        h1{
+          transition: all 4s;
+          text-align: center;
+          -webkit-text-stroke: 2px green; /* width and color */
+          font-family: 'Naruto', sans-serif; 
+          font-size: 80px;
+        }
+        h1:hover{
+          transform: scale(1.5);
+          transition: transform 0.3s ease;
+          color: green;
+        }
+        h2{
+          -webkit-text-stroke: 2px green; /* width and color */
+          font-family: 'Naruto', sans-serif; 
+          font-size: 40px;
+          color: black;
+        }
+
+        h3{
+          -webkit-text-stroke: 2px green; /* width and color */
+          font-family: 'Naruto', sans-serif; 
+          font-size: 30px;
+          color: black;
+        }
+        hr{
+            float: left;
+            width: 100%;
+            box-shadow:
+                0 0 5px darkgreen,
+                0 0 5px darkgreen, 
+                0 0 10px darkgreen, 
+                0 0 20px darkgreen, 
+                0 0 25px darkgreen, 
+                inset 0 0 10px rgba(255,255,255,0.3);
+        }
+        button{
+          transition: all 1s;
+          background-color: whitesmoke; /* Green */
+          border: 1px solid whitesmoke;
+          font-family: 'Naruto', sans-serif; 
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          box-shadow:
+            0 0 5px darkgreen,
+            0 0 5px darkgreen, 
+            0 0 10px darkgreen, 
+            0 0 20px darkgreen, 
+            0 0 25px darkgreen, 
+            inset 0 0 10px rgba(255,255,255,0.3);
+        }
+        button:hover{
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+          background-color: lightgrey;
+          color: darkgreen;
+        }
+        #enviar{
+          transition: all 1s;
+          background-color: whitesmoke; /* Green */
+          border: 1px solid whitesmoke;
+          font-family: 'Naruto', sans-serif; 
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          box-shadow:
+            0 0 5px darkgreen,
+            0 0 5px darkgreen, 
+            0 0 10px darkgreen, 
+            0 0 20px darkgreen, 
+            0 0 25px darkgreen, 
+            inset 0 0 10px rgba(255,255,255,0.3);
+        }
+        #enviar:hover{
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+          background-color: lightgrey;
+          color: darkgreen;            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: whitesmoke;
+        }
+        label{
+          -webkit-text-stroke: 2px black; /* width and color */
+          font-family: 'Dare', sans-serif; 
+          font-size: 20px;
+          color: white;     
+        }
+
+        #encabezado {
+            background-image: url(encabezado.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 20px solid grey;
+          box-shadow:
+            0 0 5px grey,
+            0 0 5px grey, 
+            0 0 10px grey, 
+            0 0 20px grey, 
+            0 0 25px darkgreen, 
+            inset 0 0 10px rgba(255,255,255,0.3);
+        }
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        #contsup{
+            text-align: center;
+        }
+        #continf{
+            text-align: center;
+            width: 100%;
+        }
+
+        #contenido {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #formulario {
+            text-align: center;
+            background-image: url(formfondo.jpg);
+            border: 3px solid #ccc;
+            padding: 20px;
+            box-shadow:
+                0 0 5px darkgreen,
+                0 0 5px darkgreen, 
+                0 0 10px darkgreen, 
+                0 0 20px darkgreen, 
+                0 0 25px darkgreen, 
+                inset 0 0 10px rgba(255,255,255,0.3);
+        }
+        ul li{
+              display:inline;
+        }
+        img{
+            margin-right: 10%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        async function solicitarNombre() {
+        nombre = prompt('¿Cómo te llamas?');
+        MostrarNombre();
+        }
+      // Solicitar el nombre mediante un prompt
+      function MostrarNombre() {
+        // Mostrar el nombre en el elemento HTML
+        var nombreMostrado = document.getElementById("nombreMostrado");
+        if(nombre.length === 0){ //Muestra en distinto formato si el usuario no introduce nombre
+            nombreMostrado.textContent = "¡Bienvenid@ a mi página" +  "!";
+        }else{
+            nombreMostrado.textContent = "¡Bienvenid@ a mi página, " + nombre + "!";
+        }
+      }
+
+      function myAlert1() {
+        alert("ARAÑA");
+        return;
+      }
+      function myAlert2() {
+        alert("TELARAÑA");
+        return;
+      }
+      function myAlert3() {
+        alert("CHECK");
+        return;
+      }
+
+    </script>
+</head>
+
+<body>
+    <div id="encabezado">
+        <h1>Bienvenido a Mi Web</h1>
+    </div>
+
+    <div id="contenido">
+        <div id="contsup">
+            <h2>Contenido</h2>
+            <p>Aquí supuestamente encontrarás información interesante, supuestamente...</p>
+            <p>SI NO INTRODUCES NINGÚN NOMBRE NO SE MOSTRARÁ LA COMA.</p>
+            <button onclick="solicitarNombre();">Introducir nombre</button>
+            <br>
+            <hr>
+            <br>
+            <p id="nombreMostrado"></p>
+            <br>
+            <hr>
+            <br>
+        </div>
+        <div id="formulario">
+            <h3>Formulario</p></h3>
+            <form>
+                <label for="nombre"><b>Nombre:</b></label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+
+                <label for="email"><b>Email: &nbsp&nbsp&nbsp</b></label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="numero"><b>Número:</b></label>
+                <input type="number" id="numero" name="numero"><br><br>
+
+                <label for="comentario"><b>Comentario:</b></label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+
+                <input id="enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+        <div id="continf">
+            <h2>Otro contenido</h2>
+            <p>PULSA LAS DISTINTAS IMÁGENES:</p>
+            <ul>
+                <li><img src="spider.png" alt="Pantalón" width="250" height="300" onclick="myAlert1();"></a></li>
+                <li><img src="telaverde.jpg" alt="Pantalón" width="250" height="300" onclick="myAlert2();"></a></li>
+                <li><img src="Buenoverde.png" alt="Pantalón" width="250" height="300" onclick="myAlert3();"></a></li>
+            </ul>
+        </div>
+
+            <div id="pie">
+                <p>&copy; 2023 Hecho por Youssef Ezzamarty</p>
+            </div>
+        </div>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-95a84f01-ec95-4a77-a95e-d85a25ca7ddf"></div>
+</body>
+
+</html>
