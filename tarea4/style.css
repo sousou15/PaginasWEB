@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Suiss';
+    src: url('fonts/Suissnord.ttf') format('truetype'),
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .tarjeta {
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow:
+    0 0 5px rgb(48, 114, 255),
+    0 0 5px rgb(48, 114, 255), 
+    0 0 10px rgb(48, 114, 255), 
+    0 0 20px rgb(48, 114, 255), 
+    0 0 25px rgb(48, 114, 255), 
+    inset 0 0 10px rgba(255,255,255,0.3);
+  }
+  
+  .tarjeta img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+    li {
+    display:inline;
+    transition: all 1s;
+
+  }
+
+  ul li{
+    -webkit-text-stroke: 2px  white; /* width and color */
+    font-family: 'Suiss', sans-serif; 
+    font-size: 25px;
+  }
+  li:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  .descripcion{
+    color: white;
+  }
+  
+  footer {
+    background-color: black ;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  h1{
+    text-align: center;
+    -webkit-text-stroke: 2px rgb(48, 114, 255); /* width and color */
+    font-family: 'Suiss', sans-serif; 
+    font-size: 80px;
+  }
+  h2{
+    -webkit-text-stroke: 2px  white; /* width and color */
+    font-family: 'Suiss', sans-serif; 
+    font-size: 25px;
+    color: black;
+    
+  }
+  button{
+    transition: all 1s;
+    background-color: whitesmoke; /* Green */
+    border: 1px solid whitesmoke;
+    font-family: 'Suiss', sans-serif; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow:
+      0 0 5px rgb(48, 114, 255),
+      0 0 5px rgb(48, 114, 255), 
+      0 0 10px rgb(48, 114, 255), 
+      0 0 20px rgb(48, 114, 255), 
+      0 0 25px rgb(48, 114, 255), 
+      inset 0 0 10px rgba(255,255,255,0.3);
+  }
+  button:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    background-color: lightgrey;
+    color: blue;
+  }
