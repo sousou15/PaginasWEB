@@ -12,7 +12,8 @@ window.onload = function() {
      const Contador = document.getElementById('Contador');
 
     /*Compruebo que el elemento existe y no es nulo, sino me da error al usar el mismo script en otro html no correspondiente : "Cannot read property 'addEventListener' of null".
-    Este error aparece en la consola del navegador. CTRL +SHIFT+J*/
+    Este error  se produce cuando intentas agregar un evento a un elemento que no existe en la página actual y aparece en la consola del navegador. CTRL +SHIFT+J*/
+    
     if(Incrementar){ 
         Incrementar.addEventListener('click', function() {
             let numero = parseInt(Contador.textContent);
