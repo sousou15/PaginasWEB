@@ -53,9 +53,18 @@ window.onload = function () {
         });
     }
 
+
+
     if (alineacionBtn) {
         alineacionBtn.addEventListener('click', function () {
-            tabla.style.textAlign = 'right';
+            const estilo = window.getComputedStyle(tabla);
+            if (estilo.getPropertyValue("float") === "none") {
+                tabla.style.float = 'right';
+            } else if (estilo.getPropertyValue("float") === "right") {
+                tabla.style.float = 'left';
+            } else {
+                tabla.style.float = 'none';
+            }
         });
     }
 
@@ -114,26 +123,26 @@ window.onload = function () {
     const botonSiguiente = document.getElementById("siguiente");
 
     function ocultarimagen() {
-        for( let i=0; i<imagenElement.length; i++){
-            if(i!== indice){
-                imagenElement[i].style.display="none"
+        for (let i = 0; i < imagenElement.length; i++) {
+            if (i !== indice) {
+                imagenElement[i].style.display = "none"
             }
         }
     }
 
-    function mostrarimagen(mostrar){
-        imagenElement[mostrar].style.display="block";
+    function mostrarimagen(mostrar) {
+        imagenElement[mostrar].style.display = "block";
     }
 
-        ocultarimagen();
-        mostrarimagen(indice);
+    ocultarimagen();
+    mostrarimagen(indice);
 
 
     function botona() {
         indice--;
-        
-        if(indice < 0){
-        
+
+        if (indice < 0) {
+
             indice++;
         }
 
@@ -143,9 +152,9 @@ window.onload = function () {
 
     function botons() {
         indice++;
-        
-        if(indice >= imagenElement.length){
-        
+
+        if (indice >= imagenElement.length) {
+
             indice--;
         }
 
@@ -153,13 +162,16 @@ window.onload = function () {
         mostrarimagen(indice);
     }
 
-    if(botonAnterior){
+    if (botonAnterior) {
         botonAnterior.addEventListener('click', botona);
     }
 
-    if(botonSiguiente){
+    if (botonSiguiente) {
         botonSiguiente.addEventListener('click', botons);
     }
+
+
+
 
 
 }
