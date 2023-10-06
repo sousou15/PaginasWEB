@@ -53,9 +53,18 @@ window.onload = function() {
         });
     }
 
+   
+
     if(alineacionBtn){
         alineacionBtn.addEventListener('click', function() {
-            tabla.style.textAlign = 'right';
+            const estilo = window.getComputedStyle(tabla);
+            if(estilo.getPropertyValue("float") === "none"){
+                tabla.style.float = 'right';
+            }else if(estilo.getPropertyValue("float") === "right" ){
+                tabla.style.float = 'left';
+            }else{
+                tabla.style.float = 'none';
+            }
         });
     }
 
